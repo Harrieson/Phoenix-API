@@ -26,6 +26,9 @@ defmodule RealDealApiWeb.Router do
     post "/accounts/create", AccountController, :create
     post "/accounts/sign_in", AccountController, :sign_in
   end
+  defp well do
+
+  end
 
   scope "/api", RealDealApiWeb do
     pipe_through [:api, :auth]
