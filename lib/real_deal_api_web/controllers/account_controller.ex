@@ -34,7 +34,7 @@ defmodule RealDealApiWeb.AccountController do
     end
   end
 
-  def sin_in(conn, %{"email" => email, "hash_password" => hash_password}) do
+  def sign_in(conn, %{"email" => email, "hash_password" => hash_password}) do
     case Guardian.authenticate(email, hash_password) do
       {:ok, account, token} ->
         conn
